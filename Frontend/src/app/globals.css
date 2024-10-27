@@ -1,0 +1,907 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+/* Global styles */
+body {
+  background-color: #f4fde7; /* Light grayish blue */
+  color: #2d3748; /* Darker text color for contrast */
+  font-family: 'Roboto', sans-serif; /* Default font */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+/* Container styles */
+.container {
+  max-width: 1280px !important;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Text colors */
+.text-y {
+  color: #f7be27 !important;
+}
+
+/* Banner styles */
+.banner-slider {
+  height: 100vh; /* Full height of the viewport */
+}
+
+.banner-slider .item {
+  height: 100vh; /* Ensure each slide is full height */
+  background-size: cover !important;
+  display: flex; /* Use flex to center content */
+  align-items: center; /* Center vertically */
+  justify-content: flex-start; /* Align content to the left */
+  padding-left: 50px; /* Add padding to the left for a gap */
+}
+
+.banner-slider .item h2 {
+  font-family: 'Playfair Display', serif; /* Use Playfair Display for the title */
+  font-size: 60px; /* Adjusted font size */
+  font-weight: 800;
+  text-align: left; /* Align the text to the left */
+  line-height: 1; /* Remove line height gap */
+  margin-bottom: 20px; /* Space between title and buttons */
+}
+
+/* Button styles */
+.link-button {
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: rgba(40, 167, 69, 0.5); /* Semi-transparent green */
+  color: white;
+  border-radius: 50px; /* Semi-circle effect */
+  text-align: center;
+  border: 2px solid #f7fff9; /* Add border for better visibility */
+  transition: background-color 0.3s ease; /* Background change on hover */
+}
+
+.link-button:hover {
+  background-color: rgba(40, 167, 70, 0.979); /* Darker semi-transparent on hover */
+}
+
+/* Navigation styles */
+nav {
+  padding: 1rem;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav ul li:last-child {
+  margin-right: 0;
+}
+
+nav a {
+  padding: 0 15px;
+  color: black;
+  text-decoration: none;
+  font-weight: 700;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #f6e05e;
+  text-decoration: underline;
+}
+
+/* Background styles */
+.scrolled-bg {
+  background-color: #4caf50;
+}
+
+.default-bg {
+  background-color: white;
+}
+
+.banner-title {
+  font-family: "Playfair Display", serif; /* Use Playfair Display for the title */
+  font-size: 3rem; /* Title font size */
+  line-height: 1; /* Remove extra space */
+  font-weight: 400;
+  margin-bottom: 1rem; /* Adjusted bottom margin for spacing */
+  margin-top: 0; /* Ensure margin at the top is 0 */
+  color: white; /* Color for better visibility */
+  text-align: left; /* Align the title to the left */
+}
+
+/* Button styles */
+.link-button {
+  margin-top: 1rem; 
+  padding: 0.75rem 1.5rem; 
+  background-color: rgba(40, 167, 69, 0.5); /* Semi-transparent green */
+  color: white; 
+  border-radius: 50px; /* Semi-circle effect */
+  text-align: center; 
+  border: 2px solid #28a745; /* Add border for better visibility */
+  transition: background-color 0.3s ease; /* Background change on hover */
+}
+
+.link-button:hover {
+  background-color: rgba(40, 167, 69, 0.7); /* Darker semi-transparent on hover */
+}
+
+/* Special Menu Section */
+.special-menu-section {
+  margin-bottom: 60px; 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-color: #f9fafb; /* Light gray color */
+  padding: 100px 0 70px; 
+  border-radius: 10px; 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+  position: relative; 
+  overflow: hidden; 
+}
+
+.special-menu-title {
+    font-family: 'Lobster', cursive; 
+    margin-bottom: 20px; 
+    font-size: 2em; 
+    text-align: center; 
+}
+
+/* Container styling for menu boxes */
+.dz-img-box {
+    padding: 20px;
+    width: 200px; 
+    background-color: #fff;
+    border: 2px solid transparent; 
+    transition: transform 0.3s ease-in-out, border-color 0.3s ease; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 0 auto; 
+}
+
+/* Image styles */
+.dz-media img {
+    width: 130px; 
+    height: 130px; 
+    object-fit: cover;
+    border-radius: 50%; 
+    transition: transform 0.5s ease-in-out;
+    margin: 0 auto;
+}
+
+/* Digger circle effect */
+.digger-circle {
+    position: absolute;
+    top: -20%; 
+    left: 0; 
+    width: 100%; 
+    height: 50%; 
+    background-color: rgba(144, 238, 144, 0.9); 
+    border-bottom-left-radius: 10px; 
+    border-bottom-right-radius: 10px; 
+    transition: background-color 0.3s ease;
+    z-index: -1; 
+}
+
+.dz-img-box:hover .digger-circle {
+    background-color: rgba(34, 139, 34, 0.8); 
+}
+
+/* Box hover effect */
+.dz-img-box:hover {
+    background-color: #f7f7f7;
+    transform: translateY(-10px); 
+    border-color: #28a745; 
+}
+
+/* Continuous rotation on hover */
+.dz-img-box:hover .dz-media img {
+    animation: continuousRotate 5s infinite linear; 
+}
+
+@keyframes continuousRotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Title styling */
+.dz-title a {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.dz-title a:hover {
+    color: #28a745; 
+}
+
+/* Description styling */
+.dz-content p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 10px;
+}
+
+/* Price styling */
+.dz-price {
+    font-size: 1rem;
+    color: #28a745; 
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+/* Add to Cart button styling */
+.btn-hover-2 {
+    margin-top: 15px;
+    background-color: #28a745; 
+    border: none;
+    padding: 10px 20px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-hover-2:hover {
+    background-color: #218838; 
+    transform: scale(1.05);
+}
+
+.overhangIcon {
+  position: relative;
+  top: -20px; /* Adjust this value for more or less overhang */
+  z-index: 1;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.overhangIcon:hover {
+  transform: translateY(-10px); /* A subtle hover effect for the icons */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add some shadow for emphasis */
+}
+/* globals.css or appropriate CSS file */
+.dz-content {
+  display: flex; /* Use flexbox */
+  flex-direction: column; /* Arrange children in a column */
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+  text-align: center; /* Center text */
+  height: 100%; /* Ensure full height for proper centering */
+}
+
+.btn.add-to-cart {
+  background-color: #4caf50; /* Green background */
+  color: white; /* White text */
+  border: none; /* No border */
+  padding: 10px 20px; /* Add some padding */
+  font-size: 16px; /* Font size */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth transition */
+  margin-top: 10px; /* Add margin to separate from the price */
+}
+
+.btn.add-to-cart:hover {
+  background-color: #388e3c; /* Darker green on hover */
+  border: 2px solid #2e7d32; /* Thick green border on hover */
+}
+
+
+
+.top-seller-label {
+  background-color: green; /* Green background color */
+  color: white; /* White text color */
+  padding: 5px 10px; /* Padding for spacing */
+  border-radius: 5px; /* Rounded corners */
+  position: absolute; /* Absolute positioning */
+  bottom: 10px; /* Positioning from the bottom */
+  left: 10px; /* Positioning from the left */
+  font-weight: bold; /* Bold text */
+}
+
+
+/*/* Quality Services Section */
+.quality-services {
+  background-color: transparent; /* Ensure the section itself has no background color */
+}
+
+/* Service Box Customization */
+.service-box {
+  transition: transform 0.3s ease; /* Smooth transition for scaling effect */
+}
+
+.service-box:hover {
+  transform: scale(1.05); /* Slightly larger on hover */
+}
+
+/* Image Opacity Effect */
+.icon img {
+  opacity: 0.8; /* Slightly transparent images */
+  transition: opacity 0.3s ease; /* Smooth transition for image opacity */
+}
+
+/* Hover effect for images */
+.service-box:hover .icon img {
+  opacity: 0.5; /* More transparent on hover */
+}
+
+/* Footer Bottom Section */
+footer .footer-bottom {
+  text-align: center;
+  margin-top: 1.25rem; /* Tailwind's mt-5 */
+}
+
+/* Menu Page Styles */
+.menu-page {
+  background-color: #f9fafb; /* Light gray color */
+}
+
+.menu-section {
+  background-color: #fff; /* White background for the menu section */
+  padding: 2rem 0;
+}
+
+.menu-category h2,
+.menu-item h3 {
+  color: #2d3748; /* Dark gray text for titles */
+}
+
+.menu-item {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Popup Styles */
+.popup-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px; /* Adjust width as needed */
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Popup Header */
+.popup-header {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* Close Button */
+.close-button {
+  align-self: flex-end;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #888;
+  transition: color 0.3s ease;
+}
+
+.close-button:hover {
+  color: #28a745; /* Change color on hover */
+}
+
+/* Form Fields */
+.popup-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.popup-form input {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border 0.3s ease;
+}
+
+.popup-form input:focus {
+  border-color: #007bff; /* Change border color on focus */
+}
+
+/* Submit Button */
+.submit-button {
+  padding: 10px;
+  background-color: #007bff; /* Primary color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Social Media Buttons */
+.social-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.social-buttons button {
+  flex: 1;
+  margin: 0 5px;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.social-buttons button:hover {
+  background-color: #e0e0e0; /* Change background on hover */
+}
+
+/* Fixed Positioning */
+.fixed {
+  position: fixed;
+  z-index: 1000; /* Ensure it appears above other elements */
+}
+
+/* Transition Effects */
+.transition-transform {
+  transition: transform 0.3s ease-in-out;
+}
+
+.shadow-lg {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Section */
+.contact-section {
+  position: relative;
+  padding: 4rem 0; /* Added padding for top and bottom */
+}
+
+.contact-box {
+  border: 2px solid #38a169; /* Green border */
+  border-radius: 8px; /* Rounded corners */
+  padding: 2rem; /* Padding for better spacing */
+  background: white; /* White background */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+  display: flex; /* Flex to center text vertically */
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Center align children */
+  justify-content: center; /* Center justify children */
+  height: 100%; /* Full height to maintain uniformity */
+}
+
+.contact-box:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+  background-color: #f0fff4; /* Light green background on hover */
+  border-color: #2f855a; /* Darker green border on hover */
+}
+
+/* Headings */
+h2 {
+  font-size: 3rem; /* Adjusted size for the main heading */
+  font-weight: 700; /* Bold weight */
+  color: #2d3748; /* Darker text color */
+  margin-bottom: 2rem; /* Spacing below the heading */
+}
+
+h3 {
+  font-size: 1.5rem; /* Size for subheadings in boxes */
+  font-weight: 600; /* Slightly bold */
+  color: #2d3748; /* Darker text color */
+  margin-bottom: 1rem; /* Spacing below subheadings */
+}
+
+p {
+  font-size: 1rem; /* Font size for paragraph text */
+  color: #4a5568; /* Text color */
+  text-align: center; /* Center text in boxes */
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  .contact-box {
+    margin: 0 1rem; /* Add spacing between boxes */
+  }
+}
+
+/* Background Image */
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1; /* Send background image behind content */
+}
+
+/* Cart Popup */
+.cart-popup {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  width: 300px; /* Increase the width */
+  max-height: 80vh; /* Limit the height */
+  overflow-y: auto; /* Enable scrolling if needed */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+.close-popup {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Checkout Button */
+.checkout-button {
+  background-color: #0070f3; /* Stylish blue color */
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  width: 100%; /* Full width for the button */
+  font-size: 16px; /* Increase font size */
+}
+
+.checkout-button:hover {
+  background-color: #005bb5; /* Darken color on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .cart-popup {
+    width: 90%; /* Make it responsive */
+  }
+}
+
+/* Custom Cursor Styles */
+.custom-cursor-ring,
+.custom-cursor-dot {
+  position: fixed;
+  pointer-events: none; /* Prevent blocking mouse events */
+  transform: translate(-50%, -50%);
+  z-index: 9999; /* Ensure it's on top */
+}
+
+.custom-cursor-ring {
+  width: 40px; /* Adjust as needed */
+  height: 40px; /* Adjust as needed */
+  border-radius: 50%;
+  border: 2px solid rgba(242, 242, 248, 0.7);
+  transition: border-color 0.3s ease;
+}
+
+.custom-cursor-dot {
+  width: 10px; /* Adjust as needed */
+  height: 10px; /* Adjust as needed */
+  border-radius: 50%;
+  background-color: rgba(235, 182, 85, 0.7);
+  transition: background-color 0.3s ease;
+}
+.review-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative; /* Ensure that child elements are positioned relative to this card */
+}
+
+.review-card:hover {
+  transform: translateY(-5px); /* Slightly lift the card */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+.review-card img {
+  transition: opacity 0.3s ease; /* Smooth opacity transition */
+}
+
+.review-card img:hover {
+  opacity: 1; /* Fully visible on hover */
+}
+
+.chef-section {
+  padding: 0; /* No padding around the section */
+  margin-bottom: 4rem; /* Add bottom margin for gap between sections */
+}
+
+h2 {
+  font-family: 'Cursive', sans-serif; /* Stylish font for the heading */
+  color: #333; /* Dark text color */
+  margin-bottom: 2rem; /* Space below the heading */
+}
+
+.chefs-grid {
+  display: flex;
+  justify-content: center; /* Center the chef cards */
+  flex-wrap: wrap; /* Wraps the items in case of overflow */
+  gap: 1.5rem; /* Space between chef cards */
+}
+
+.chef-card {
+  position: relative; /* Position relative for absolute positioning of the img */
+  overflow: hidden; /* Ensure content doesn't overflow */
+  border-radius: 10px; /* Rounded corners for chef cards */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15); /* Card shadow */
+  width: 220px; /* Set a fixed width for cards */
+  height: 300px; /* Fixed height for cards */
+}
+
+.chef-image {
+  width: 100%; /* Full width for uniformity */
+  height: 100%; /* Full height for uniformity */
+  object-fit: cover; /* Ensure images cover the entire area without distortion */
+  position: absolute; /* Position absolute to fill the parent */
+  top: 0; /* Align to the top */
+  left: 0; /* Align to the left */
+}
+
+.chef-info {
+  position: absolute; /* Position info absolute over the image */
+  bottom: 0; /* Align to the bottom */
+  left: 0; /* Align to the left */
+  right: 0; /* Align to the right */
+  background: rgba(255, 255, 255, 0.8); /* Semi-transparent background for readability */
+  padding: 0.5rem; /* Small padding */
+  text-align: center; /* Center align text */
+}
+
+.chef-name {
+  margin: 0; /* Remove margin */
+  font-size: 1.2rem; /* Font size for chef name */
+  color: #333; /* Dark color for chef name */
+}
+
+.chef-title {
+  font-size: 1rem; /* Font size for chef title */
+  color: #666; /* Lighter color for title */
+  margin-top: 0.25rem; /* Space above the title */
+}
+
+.social-icons {
+  position: absolute;
+  bottom: 10px; /* Adjust position */
+  left: 10px; /* Align to the left */
+  display: flex;
+  flex-direction: column; /* Stack icons vertically */
+  align-items: flex-start; /* Align icons to the start */
+  opacity: 0; /* Initially hide social media icons */
+  transition: opacity 0.3s ease; /* Smooth transition for opacity */
+}
+
+.chef-card:hover .social-icons {
+  opacity: 1; /* Show icons on hover */
+}
+.share-container {
+  position: relative; /* Required for absolute positioning */
+  display: inline-block; /* Align items next to each other */
+}
+
+.social-media-icons {
+  display: none; /* Hide icons by default */
+  position: absolute; /* Position the icons absolutely */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Adjust position */
+  bottom: 100%; /* Position above the share icon */
+  background-color: white; /* Background color for visibility */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+  padding: 10px; /* Padding around the icons */
+  z-index: 10; /* Ensure icons are above other elements */
+  display: flex; /* Use flexbox to align items */
+  flex-direction: column; /* Arrange icons in a column */
+  align-items: center; /* Center icons horizontally */
+}
+
+.social-media-icons.show {
+  display: flex; /* Show icons when hovered */
+}
+
+.social-icon {
+  display: flex;
+  align-items: center; /* Center the icon */
+  justify-content: center; /* Center the icon */
+  width: 40px; /* Icon size */
+  height: 40px; /* Icon size */
+  border-radius: 8px; /* Box shape */
+  margin: 5px 0; /* Vertical spacing between icons */
+  color: white; /* Text color */
+  transition: background-color 0.3s; /* Smooth transition */
+}
+
+/* Specific colors for each icon */
+.social-icon:nth-child(1) { background-color: #3b5998; } /* Facebook */
+.social-icon:nth-child(2) { background-color: #e1306c; } /* Instagram */
+.social-icon:nth-child(3) { background-color: #1da1f2; } /* Twitter */
+
+/* Change colors on hover */
+.social-icon:hover {
+  opacity: 0.8; /* Slightly fade on hover */
+}
+
+/* Always show the share icon */
+.share-icon {
+  display: block; /* Ensure the share icon is always visible */
+  color: #000; /* Color of the share icon */
+  margin-top: 10px; /* Space between the icons and the share icon */
+  cursor: pointer; /* Change cursor on hover */
+}
+
+/* Reserve Your Table Section */
+#reserve-table {
+  position: relative; /* Set position relative for overlay */
+  overflow: hidden; /* Prevent overflow */
+  padding: 2rem; /* Padding around the section */
+}
+
+#reserve-table::before {
+  content: ""; /* Empty content for the overlay */
+  position: absolute; /* Position it absolutely */
+  top: 0; /* Align to the top */
+  left: 0; /* Align to the left */
+  right: 0; /* Align to the right */
+  bottom: 0; /* Align to the bottom */
+  background-image: url('/background.jpg'); /* Path to your background image */
+  background-size: cover; /* Cover the entire section */
+  background-position: center; /* Center the image */
+  opacity: 0.5; /* Set transparency of the image */
+  z-index: 1; /* Place it behind the text */
+}
+
+.reservation-section {
+  position: relative;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  z-index: 2;
+  color: #2d3748;
+}
+
+.reservation-section h2 {
+  font-family: 'Pacifico', cursive; /* Apply same font */
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #333; /* Darker color */
+  text-align: center;
+}
+
+.reservation-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.reservation-form input {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+button[type="submit"] {
+  background-color: #28a745;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: #218838;
+}
+
+@media (max-width: 768px) {
+  .reservation-section {
+    padding: 1rem;
+  }
+
+  .reservation-section h2 {
+    font-size: 2rem;
+  }
+}
+
+footer {
+  background-color: #2d2d2d; /* Dark background for footer */
+  color: white; /* Text color */
+}
+
+.contact-us, .social-media {
+  margin-bottom: 20px; /* Margin between sections */
+}
+
+.send-us {
+  background-color: #7da640; /* Lime green background for the message box */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+.send-us h4 {
+  font-size: 1.5rem; /* Increased font size for the heading */
+  font-weight: bold; /* Bold font */
+  color: white; /* White text color */
+  margin-bottom: 16px; /* Space below the heading */
+}
+
+.send-us-form input,
+.send-us-form textarea {
+  width: 100%; /* Full width */
+  padding: 10px; /* Padding inside inputs */
+  margin-bottom: 10px; /* Space between inputs */
+  border: 1px solid #ccc; /* Border color */
+  border-radius: 4px; /* Rounded corners */
+}
+
+.send-us-form button {
+  background-color: #28a745; /* Button background color */
+  color: white; /* Button text color */
+  padding: 10px; /* Padding inside button */
+  border: none; /* Remove border */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+.send-us-form button:hover {
+  background-color: #218838; /* Darker shade on hover */
+}
+
+/* Social Media Icon Styles */
+.social-media a {
+  color: #ffffff; /* Social media icons color */
+  transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.social-media a:hover {
+  color: #ffcc00; /* Color on hover */
+}
+
+.footer-bottom {
+  text-align: center; /* Centered text */
+  margin-top: 20px; /* Space above */
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  .send-us {
+    margin-left: 20px; /* Shift the send message section to the left */
+  }
+}
+
+.menu-background {
+  background-image: url('/menu.png');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh; /* Ensure it fills the viewport height */
+}

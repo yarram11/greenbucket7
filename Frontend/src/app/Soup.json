@@ -1,0 +1,34 @@
+{
+    "category": "Soup",
+    "items": [
+      {
+        "imageSrc": "/img1.jpg",
+        "altText": "Veg Soup",
+        "price": 250,
+        "soupName": "Veg Soup",
+        "description": "A delicious blend of fresh vegetables and herbs."
+      },
+      {
+        "imageSrc": "/img2.jpg",
+        "altText": "Chicken Soup",
+        "price": 350,
+        "soupName": "Chicken Soup",
+        "description": "A warm, hearty chicken broth with spices."
+      },
+      {
+        "imageSrc": "/img3.jpg",
+        "altText": "Mutton Soup",
+        "price": 200,
+        "soupName": "Mutton Soup",
+        "description": "Rich and flavorful, made with tender mutton."
+      },
+      {
+        "imageSrc": "/img4.png",
+        "altText": "Fish Soup",
+        "price": 450,
+        "soupName": "Fish Soup",
+        "description": "A light and tangy soup made with fresh fish."
+      }
+    ]
+  }
+  
